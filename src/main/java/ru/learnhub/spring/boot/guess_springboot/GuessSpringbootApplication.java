@@ -16,7 +16,7 @@ public class GuessSpringbootApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(GuessSpringbootApplication.class, args);
 //		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("config.xml");
 		game.Game game=(game.Game) context.getBean("game");
-		System.out.println(game.getCode());
+//		System.out.println(game.getCode());
 //		ResourceBundleMessageSource messageSource = (ResourceBundleMessageSource) context.getBean("messageSource");
 		ResourceBundle messageSource =ResourceBundle.getBundle("game",US);
 //		System.out.println(ResourceBundle.getBundle("game",US).getString("greeting"));
