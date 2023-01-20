@@ -2,6 +2,7 @@ package game;
 
 import event.EventData;
 import event.EventGame;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.context.ApplicationListener;
 
 public class Game implements ApplicationListener<EventGame> {
@@ -23,7 +24,7 @@ public class Game implements ApplicationListener<EventGame> {
     }
 
     @Override
-    public void onApplicationEvent(EventGame event) {
+    public void onApplicationEvent(@NotNull EventGame event) {
         EventData data = (EventData) event.getSource();
         if (Integer.decode(data.getDetails()) > value) {
             code = "less";
